@@ -114,17 +114,16 @@ class ToDoList {
 const toDo = new ToDoList();
 toDo.render();
 
-
 function check(toDo) {
-    const description = toDo.querySelector('.todo-description');
-    const todo = this.toDo.find((item) => item.description === description.textContent);
-    if (todo.completed === true) {
-      todo.completed = false;
-      description.classList.remove('strikethrough');
-    } else {
-      todo.completed = true;
-      description.classList.add('strikethrough');
-    }
-    this.saveToLocalStorage();
+  const description = toDo.querySelector('.todo-description');
+  const todo = this.toDo.find((item) => item.description === description.textContent);
+  if (todo.completed === true) {
+    todo.completed = false;
+    description.classList.remove('strikethrough');
+  } else {
+    todo.completed = true;
+    description.classList.add('strikethrough');
   }
-  export default check;
+  this.saveToLocalStorage();
+}
+export default check;
